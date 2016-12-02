@@ -45,7 +45,6 @@
 
      }
      var wrap=document.querySelectorAll(".wrap2 a");
-     alert(wrap.length)
      for(var i=0;i<wrap.length;i++){
          wrap[i].setAttribute("clstag","jr|keycount|jrGongYi1026|"+(i+1))
          wrap[i].setAttribute("target","_blank")
