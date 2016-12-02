@@ -21,8 +21,8 @@
      console.log(tableJson)
      for (var i = 0; i < wrapImg.length; i++) {
 
-         var E = new RegExp(wrapImg[i].getAttribute("src").replace('../images/', ''));
-         var E1 = wrapImg[i].getAttribute("src").replace('../images/', '')
+         var E = new RegExp(wrapImg[i].getAttribute("src").replace('images/', ''));
+         var E1 = wrapImg[i].getAttribute("src").replace('images/', '')
          wrapImg[i].setAttribute("alt", "京东平台商品");
          for (var name in tableJson) {
              // if (E.test(name)) {
