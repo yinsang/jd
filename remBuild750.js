@@ -11,7 +11,7 @@
             // 不用计算的rem 640
            // doc.documentElement.style.fontSize = (50 * innerWidth / 320)  + 'px';
             // 750
-             doc.documentElement.style.fontSize = (50 * innerWidth / 273)  + 'px';
+             doc.documentElement.style.fontSize = (50 * innerWidth / 375)  + 'px';
         };
         fontScale();
         win.addEventListener('resize', fontScale, false);
