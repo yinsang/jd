@@ -22,7 +22,10 @@
                       countNone ++
                       NoneArray.push(E1)
                     }
-                    wrapImg[i].setAttribute("src", tableJson[E1]);
+                 if(wrapImg[i].getAttribute("src").match("images/")){
+                  wrapImg[i].setAttribute("src", tableJson[E1]);
+                 }
+                    
                 }
                 if(countNone){
                        alert('未替换'+countNone+'个---'+NoneArray)
