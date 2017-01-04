@@ -9,11 +9,17 @@ const nodeListToArray = (nodeList)=>{
     return arr
 }
 nodeListToArray(aLink).forEach(function(e){
-	e.setAttribute("href", "#")
+	if(e.getAttribute("href").slice(0,2) == "ht" || e.getAttribute("href").slice(0,2) == "//"){
+		e.setAttribute("href", "#")
+	}		
+
 
 })
 nodeListToArray(aImg).forEach(function(e){
-	e.setAttribute("src", "images/")
+	if(e.getAttribute("src").slice(0,2) == "ht" || e.getAttribute("src").slice(0,2) == "//"){
+		e.setAttribute("src", "images/")
+	}
+	
 
 })
 alert("a链接和img已被初始化")
