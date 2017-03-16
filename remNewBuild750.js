@@ -149,4 +149,4 @@ window.mobileUtil = (function(win, doc) {
     })(window, document);
     // 默认直接适配页面
     mobileUtil.fixScreen(); 
-    console.log("success")
+    console.log("rem file insert success")
