@@ -4,10 +4,10 @@ window.mobileUtil = (function(win, doc) {
                 isIos = /iphone|ipod|ipad/gi.test(UA) && !isAndroid, // 据说某些国产机的UA会同时包含 android iphone 字符
                 isMobile = isAndroid || isIos;  // 粗略的判断
         var userURL = document.URL 
-        var ifShared =     /winzoom|utm_source/gi.test(userURL) 
+        var isShared =     /winzoom|utm_source/gi.test(userURL) 
 
         return {
-            ifShared:ifShared,
+            isShared:isShared,
             isAndroid: isAndroid,
             isIos: isIos,
             isMobile: isMobile,
@@ -51,7 +51,8 @@ window.mobileUtil = (function(win, doc) {
                         }
                         var rem = width / 7.5;
                         docEl.style.fontSize = rem + 'px';
-                        if(window.location.href.indexOf('/visualediting/visualEditing.html?veBean.pageInstanceId')>-1){
+                            //jshop's decoration system;
+                        if(window.location.href.indexOf('pageDecorate')>-1){
                             docEl.style.fontSize = '42.6666666666667px';
                         }
                     };
@@ -108,7 +109,7 @@ window.mobileUtil = (function(win, doc) {
                         //console.log(width)
                         var rem = width / 7.5;
                         docEl.style.fontSize = rem + 'px';
-                        if(window.location.href.indexOf('/visualediting/visualEditing.html?veBean.pageInstanceId')>-1){
+                        if(window.location.href.indexOf('pageDecorate')>-1){
                             docEl.style.fontSize = '42.6666666666667px';
                         }
                     };
@@ -149,4 +150,4 @@ window.mobileUtil = (function(win, doc) {
     })(window, document);
     // 默认直接适配页面
     mobileUtil.fixScreen(); 
-    console.log("rem file insert success")
+    console.log("rem.js insert success")
