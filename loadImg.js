@@ -34,5 +34,6 @@
                 // alert(wrap.length)
                 for(var i=0;i<wrap.length;i++){
                     wrap[i].setAttribute("target","_blank")
+                    wrap[i].setAttribute("clstag","jr|keycount|" +document.title+ "|i")
                 }
             }
