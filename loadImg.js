@@ -22,7 +22,7 @@
                       countNone ++
                       NoneArray.push(E1)
                     }
-                 if(wrapImg[i].getAttribute("src").match("images/")){
+                 if(wrapImg[i].getAttribute("src").match("images/") && tableJson[E1] != undefined){
                   wrapImg[i].setAttribute("src", "http:" + tableJson[E1]);
                  }
                     
