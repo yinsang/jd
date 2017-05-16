@@ -1,4 +1,4 @@
- window.onload=function() {
+ window.addEventListener("load", function() {
                var aHead = document.querySelectorAll(".wrap1 thead");
                for(var i = 0; i < aHead.length; i++){
                    aHead[i].innerHTML=""
@@ -10,8 +10,11 @@
 
                     var trSrc = aTr[i].querySelector(".btn-primary").getAttribute("href");
                     console.log(trSrc)
+                    if(tableJson[trT] == undefined){
+
                     tableJson[trT] = trSrc;
-                }  
+                    }
+                }
                 var wrapImg = document.querySelectorAll(".wrap2 img");
                 console.log(tableJson)
                 var countNone = 0;
@@ -25,7 +28,7 @@
                  if(wrapImg[i].getAttribute("src").match("images/") && tableJson[E1] != undefined){
                   wrapImg[i].setAttribute("src", "http:" + tableJson[E1]);
                  }
-                    
+
                 }
                 if(countNone){
                        alert('未替换'+countNone+'个---'+NoneArray)
@@ -36,4 +39,4 @@
                     wrap[i].setAttribute("target","_blank")
                     wrap[i].setAttribute("clstag","jr|keycount|" +document.title+ "|" + i)
                 }
-            }
+            })
