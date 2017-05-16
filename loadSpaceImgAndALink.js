@@ -17,7 +17,7 @@ nodeListToArray(aLink).forEach(function(e){
 })
 nodeListToArray(aImg).forEach(function(e){
 	if(e.getAttribute("src").slice(0,2) == "ht" || e.getAttribute("src").slice(0,2) == "//"){
-        if(e.indexOf("dont-change")  == -1){
+        if(e.className.indexOf("dont-change")  == -1){
 
 		e.setAttribute("src", "images/")
         }
