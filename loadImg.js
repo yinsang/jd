@@ -1,5 +1,5 @@
 //本地代码的images/1.png需要替成线上的http链接，写个小插件来实现下，并添加埋点。
-//并在页面复用时讲img和a变为空
+//并在页面复用时设置img和a变为空
 var wypSup = (function(){
     class supFoo {
         constructor (){
