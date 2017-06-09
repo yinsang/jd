@@ -72,7 +72,7 @@ var wypSup = (function(){
             // 加埋点
             wrap.forEach(function(item, index){
 item.setAttribute("target","_blank")
-                item.setAttribute("clstag","jr|keycount|" +document.title+ "|" + i)
+                item.setAttribute("clstag","jr|keycount|" +document.title+ "|" + index)
             })
         }
     }
